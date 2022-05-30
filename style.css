@@ -2,30 +2,28 @@
 
 * {
     box-sizing: border-box;
-}
-
-:root {
+  }
+  
+  :root {
     --primary-color: #000;
     --secondary-color: #fff;
-}
-
-html{
-    transition: all 0.75s ease-in-out;
-}
-
-
-html.dark {
+  }
+  
+  html {
+    transition: all 0.5s ease-in;
+  }
+  
+  html.dark {
     --primary-color: #fff;
     --secondary-color: #333;
-}
-
-html.dark {
+  }
+  
+  html.dark {
     background-color: #111;
     color: var(--primary-color);
-
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Heebo', sans-serif;
     display: flex;
     align-items: center;
@@ -33,9 +31,14 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
-}
+  }
 
-.toggle {
+  button {
+      height: 2.5rem;
+      width: 6.5rem;
+  }
+  
+  .toggle {
     cursor: pointer;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -43,27 +46,27 @@ body {
     border-radius: 4px;
     padding: 8px 12px;
     position: absolute;
-    top: 100px;
-}
-
-.toggle:focus {
+    top: 80%;
+  }
+  
+  .toggle:focus {
     outline: none;
-}
-
-.clock-container {
+  }
+  
+  .clock-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.clock {
+  }
+  
+  .clock {
     position: relative;
     width: 200px;
     height: 200px;
-}
-
-.needle {
+  }
+  
+  .needle {
     background-color: var(--primary-color);
     position: absolute;
     top: 50%;
@@ -71,35 +74,36 @@ body {
     height: 65px;
     width: 3px;
     transform-origin: bottom center;
-}
-
-.needle.hour {
+    transition: all 0.5s ease-in;
+  }
+  
+  .needle.hour {
     transform: translate(-50%, -100%) rotate(0deg);
-}
-
-.needle.minute {
+  }
+  
+  .needle.minute {
     transform: translate(-50%, -100%) rotate(0deg);
     height: 100px;
-}
-
-.needle.second {
+  }
+  
+  .needle.second {
     transform: translate(-50%, -100%) rotate(0deg);
     height: 100px;
     background-color: #e74c3c;
-}
-
-.center-point {
+  }
+  
+  .center-point {
     background-color: #e74c3c;
-    width: 11px;
-    height: 11px;
+    width: 10px;
+    height: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-}
-
-.center-point::after {
+  }
+  
+  .center-point::after {
     content: '';
     background-color: var(--primary-color);
     width: 5px;
@@ -109,28 +113,30 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-}
-
-.time {
+  }
+  
+  .time {
     font-size: 60px;
-}
-.date {
-    color: #9897a9;
+  }
+  
+  .date {
+    color: #aaa;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
     text-transform: uppercase;
-}
-
-.date .circle {
+  }
+  
+  .date .circle {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border-radius: 50px;
+    border-radius: 50%;
     height: 18px;
     width: 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 18px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in;
     font-size: 12px;
-}
+  }
+
